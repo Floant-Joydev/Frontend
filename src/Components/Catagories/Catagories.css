@@ -1,0 +1,43 @@
+.catagories{
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.135);
+}
+.catagories h2{
+    padding: 1rem 0rem;
+}
+.catagories .sets{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.catagories .sets .set h4{
+    font-size: 1.2rem;
+}
+.catagories .sets .set ul{
+    list-style: none;
+    padding-top: 0.5rem;
+    
+}
+.catagories .set ul li{
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+.catagories .set {
+    height: 10rem;
+}
+.catagories .set ul li:hover{
+    color: var(--main-green);
+    font-weight: 700;
+    padding: 0.2rem 0;
+}
+.catagories .set ul li:hover::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-green);
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+}

@@ -1,0 +1,40 @@
+.cust-card{
+    position: relative;
+    width: 18rem;
+    /* margin: 0rem 2rem; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem 0rem 4rem 0rem;
+}
+.cust-card img{
+    margin: 2rem 0rem 0rem 0rem ;
+}
+.cust-card h2{
+    font-size: 1.2rem;
+    /* margin: 1rem 0rem 2rem 0rem ; */
+    margin: 0rem 0rem 1rem 0rem;
+    padding: 0rem;
+}
+.cust-card p{
+    width: 80%;
+    text-align: center;
+}
+
+.cust-card .star img {
+    margin: 1rem .5rem;
+}
+.cust-card .empty{
+    width: 90%;
+    height: 5px;
+    margin-bottom: .5rem;
+}
+.cust-card .after{
+    position: absolute;
+    width: 40%;
+    height: 10px;
+    top: -5px;
+    left: calc(50% - 20%);
+}

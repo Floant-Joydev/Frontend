@@ -1,0 +1,288 @@
+.subs-heading h2{
+    font-size: 2.4rem;
+}
+.subs-heading p{
+    font-size: 1.4rem;
+}
+
+
+
+.product-body .subs-right{
+    width: 50%;
+    padding: 0rem 5rem;
+}
+.subs-right .qnt{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.subs-right .qnt .item:first-child{
+    margin-right: 5rem;
+}
+.subs-right .qnt .item h4{
+    font-size: 1.3rem;
+}
+.subs-right .qnt .item .box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.158);
+    padding: .5rem 1rem;
+}
+.subs-right .qnt .item .box div{
+    display: flex;
+    flex-direction: column;
+    /* margin: .8rem 1rem; */
+}
+.subs-right .qnt .item .box div:first-child{
+    margin-right: 3rem;
+}
+.subs-right .qnt .item .box div p{
+    font-size: 1.1rem;
+    /* font-weight: 600; */
+}
+.subs-right .qnt .item .box div select{
+    font-size: 1rem;
+    padding: 0rem .5rem;
+    border: none;
+    background-color: var(--bar-ash);
+}
+
+
+
+
+
+
+
+.subs-right .date{
+    margin: 1rem 0rem;
+}
+.subs-right .date .item div{
+    display: flex;
+}
+.subs-right .date .item h4{
+    font-size: 1.3rem;
+}
+.subs-right .date .item div .box{
+    padding: .5rem 1rem;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.158);
+}
+.subs-right .date .item div .box:first-child{
+    margin-right: 5rem;
+}
+.subs-right .date .item div .box p{
+    font-size: 1.1rem;
+}
+.subs-right .date .item div .box select{
+    border: none;
+    font-size: 1rem;
+    padding: 0rem .5rem;
+    background-color: var(--bar-ash);
+}
+.subs-right .date .item div .box button{
+    border: none;
+    background-color: var(--bar-ash);
+    font-size: 1rem;
+    padding: 0rem .5rem;
+}
+
+.amount .item h4{
+    font-size: 1.3rem;
+}
+.amount .item .box{
+    width: 100%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.158);
+    padding: 0.5rem 1rem;
+}
+.amount .item .box .line{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.amount .item .box .line p{
+    font-size: 1rem;
+}
+.discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.158);
+}
+.discount select{
+    height: 2rem;
+    border: none;
+    width: 85%;
+    padding: 0rem 0rem 0rem 1rem;
+}
+.discount button{
+    height: 2rem;
+    width: 15%;
+    border: none;
+    color: var(--main-white);
+    background-color: #B75E1F;
+    font-size: 1rem;
+}
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.158);
+    height: 2rem;
+} 
+.total h4{
+    font-size: 1.1rem;
+    padding: 0rem 1rem;
+}
+
+.btn{
+    width: 100%;
+    margin: 1rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn button{
+    font-size: 1.1rem;
+    padding: .5rem 2.5rem;
+    border: none;
+    color: var(--main-white);
+    background-color: var(--main-brown);
+}
+.btn button:first-child{
+    background-color: var(--main-green);
+}
+
+
+
+
+.about{
+    margin: 3rem 0rem;
+}
+.about h4{
+    font-size: 2rem;
+}
+.about p{
+    font-size: 1.2rem;
+}
+
+
+
+
+
+ /* Calender  */
+.calender{
+    width: 30rem;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    background-color: white;
+    margin: auto;
+}
+
+.calender .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+/* .calender .head .set_date{
+    width: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+} */
+.calender .head h2{
+    font-size: 1.2rem;
+}
+ .calender .head div{
+    margin: 0rem .3rem;
+    display: flex;
+    align-items: center;
+ }
+ .calender .week ul{
+    background-color: var(--bar-ash);
+    margin: 1rem 0rem;
+    border-radius: 10px;
+    display: flex;
+    list-style: none;
+    width: 100%;
+ }
+.calender .week ul li{
+    width: calc(100%/7);
+    text-align: center;
+}
+.calender .week ul li.red{
+    color: red;
+}
+.calender .days ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+}
+.calender .days ul li{
+    width: calc(100%/7 - 1.6rem);
+    text-align: center;
+    margin: .4rem .8rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.calender .days ul li.inactive{
+    opacity: 0.3;
+}
+.calender .days ul li.selected{
+    background-color: #4901BD;
+    color: var(--main-white);
+}
+.calender .count{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.calender .count div{
+    width: 82%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #37640A;
+    color: var(--main-white);
+    padding: 0rem 1rem;
+    height: 2rem;
+}
+.calender .count button{
+    border: none;
+    padding: 0rem 1rem;
+    height: 2rem;
+    background-color: #37640A;
+    color: white;
+}
+.full-body{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 15rem;
+}
+.calender{
+    position: relative;
+}
+.calender .prev{
+    height: 3rem;
+    padding: 0rem .3rem;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    left: .5rem;
+    top: calc(50% - 1.5rem);
+}
+.calender .next{
+    height: 3rem;
+    padding: 0rem .3rem;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    right: .5rem;
+    top: calc(50% - 1.5rem);
+}

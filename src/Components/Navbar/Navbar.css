@@ -1,0 +1,165 @@
+/* Top section */
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-green);
+    color: var(--main-white);
+    height: 2.5rem;
+}
+
+
+/* middle section */
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: .5rem 0rem;
+}
+.middle .search{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle .search input{
+    height: 2.5rem;
+    width: 50vw;
+    padding: 0 0 0 4rem;
+    font-size: 1.1rem;
+    border: 2px solid var(--main-black);
+}
+.middle .search img{
+    position: absolute;
+    left: 1rem;
+}
+.middle .search button{
+    height: 2.5rem;
+    padding: 0rem 2rem;
+    color: var(--main-white);
+    background-color: var(--main-black);
+    font-size: 1.1rem;
+    border:1px solid var(--main-black) ;
+}
+.middle .cart-icon{
+    position: relative;
+}
+.middle .cart-icon .cart-number{
+    position: absolute;
+    background-color: orangered;
+    /* background-color: var(--main-green); */
+    top: -1rem;
+    right: -1rem;
+    padding: 0rem .6rem;
+    color: white;
+    border-radius: 50%;
+}
+.middle .btn{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    padding: 0rem 1rem;
+    color: var(--main-white);
+    background-color: var(--main-green);
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.middle div{
+    position: relative;
+}
+.middle div ul{
+    position: absolute;
+    top: 4rem;
+    background-color: var(--main-green);
+    width: 10rem;
+    font-size: 1.1rem;
+    color: white;
+    list-style: none;
+    padding: .5rem .5rem;
+    z-index: 100;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.middle div ul.hide{
+    display: none;
+}
+.middle div ul li{
+    color: white;
+    padding: .2rem 0rem;
+}
+.middle div ul li:hover{
+    opacity: .5;
+}
+.middle div ul hr{
+    width: 100%;
+}
+.middle .btn img{
+    margin-right: 1rem;
+}
+
+
+/* Navabr section */
+.navbar{
+    height: 2.5rem;
+    background-color: var(--main-green);
+    color: white;
+}
+
+.navbar ul{
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.navbar ul li{
+    list-style: none;
+    position: relative;
+}
+.navbar ul li img{
+    margin: 0rem 1rem ;
+}
+
+.navbar ul li .sub-navbar{
+    padding: 1rem 2rem;
+    z-index: 1;
+    position: absolute;
+    top: 1.3rem;
+    width: 10rem;
+    background-color: var(--main-green);
+    z-index: 100;
+    color: var(--main-white);
+    display: none;
+    transition: .2s;
+}
+.navbar ul li:hover .sub-navbar,
+.navbar ul li .sub-navbar:hover{
+    display: block;
+}
+.navbar ul li .sub-navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.navbar ul li .sub-navbar ul li{
+    padding: .5rem 0;
+    opacity: 1;
+    opacity: 0.5;
+    transition: .2s;
+}
+.navbar ul li .sub-navbar ul li:hover{
+    opacity: 1;
+}
+
+

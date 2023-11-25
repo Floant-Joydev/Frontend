@@ -1,0 +1,78 @@
+.offer-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.offer-heading h2{
+    font-size: 2.5rem;
+}
+.offer-heading .filter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.offer-heading .filter p{
+    margin: 0rem 1rem;
+}
+.offer-heading .filter select{
+    font-size: 1.1rem;
+    padding: 0rem .5rem;
+}
+
+.offer-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.offer-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem 0rem 8rem 0rem;
+}
+.offer-pagination .pages{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.offer-pagination .pages p{
+    padding: 0rem .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.offer-pagination .pages p:last-child{
+    text-decoration: none;
+}
+.offer-pagination .btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.offer-pagination .btn button{
+    height: 2.5rem;
+    padding: 0rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3rem;
+}
+
+.offer-pagination .btn .previous{
+    background-color: var(--main-white);
+    border: 2px solid var(--main-green);
+    opacity: 0.5;
+}
+.offer-pagination .btn .after{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--main-white);
+    background-color: var(--main-green);
+}
+.offer-pagination .btn .after img{
+    margin-left: 1rem;
+}
+
+

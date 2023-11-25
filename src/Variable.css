@@ -1,0 +1,32 @@
+:root{
+
+    --main-green : #204D25;
+    --main-white: #FFFFFF;
+    --main-black: #2B2B2B;
+    --main-brown: #765201;
+
+    --customer-blue: #4978BC;
+    --customer-brown: #B75E1F;
+    --customer-green: #37640A;
+    --customer-ash: #595959;
+
+    --bar-ash: #F1F1F1;
+    
+    --offrer-red: #BA0F0F;
+    --input-clr: #fcffe8;
+
+}
+
+
+.p1{
+    padding: 0rem 5rem;
+}
+.m1{
+    margin: 0rem 5rem;
+}
+a {
+    text-decoration: none;
+}
+button, img{
+    cursor: pointer;
+}

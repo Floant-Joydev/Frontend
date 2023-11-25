@@ -1,0 +1,57 @@
+.one-blog{
+    width: 100%;
+}
+.one-blog .img {
+    width: 100%;
+    height: 35rem;
+    /* background-image: url('../../assets/image/Blog1.svg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+}
+
+.one-blog .content .heading{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 2rem 0rem;
+}
+.one-blog .content .heading .left{
+    width: 35rem;
+}
+.one-blog .content .heading .left h2{
+    font-size: 2rem;
+}
+.one-blog .content .heading .left p{
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+.one-blog .content .heading .right .stars img{
+    width: 2rem;
+    margin: 0rem .4rem;
+}
+.one-blog .content .heading .right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.one-blog .content .heading .right p{
+    font-size: 1.3rem;
+}
+.one-blog .content .heading .right .stars img:last-child{
+    margin-right: 0rem;
+}
+.one-blog .content .body .item{
+    margin: 2rem 0rem;
+}
+.one-blog .content .body .item p{
+    font-size: 1.3rem;
+}
+.one-blog .content .body .item p strong {
+    font-size: 1.5rem;
+}
+.one-blog .content .body .item ol{
+    margin-left: 2rem;
+}

@@ -1,0 +1,275 @@
+/* Hero-slider section */
+
+.hero-slider{
+    overflow: hidden;
+    position: relative;
+}
+.hero-slider .frame{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    width: fit-content;
+    right: 0vw;
+    transition: .1s;
+    animation: sliding 90s linear infinite;
+}
+.hero-slider .frame img{
+    width: 100vw;
+}
+@keyframes sliding{
+    0%{right: 0vw;}
+    9.5%{right: 0vw;}
+    10%{right: 100vw;}
+    19.5%{right: 100vw;}
+    20%{right: 200vw;}
+    29.5%{right: 200vw;}
+    30%{right: 300vw;}
+    39.5%{right: 300vw;}
+    40%{right: 400vw;}
+    49.5%{right: 400vw;}
+    50%{right: 500vw;}
+    59.5%{right: 500vw;}
+    60%{right: 400vw;}
+    69.5%{right: 400vw;}
+    70%{right: 300vw;}
+    79.5%{right: 300vw;}
+    80%{right: 200vw;}
+    89.5%{right: 200vw;}
+    90%{right: 100vw;}
+    99.5%{right: 100vw;}
+    100%{right: 0vw;}
+}
+
+.hero-slider button{
+    position: absolute;
+    bottom: 10rem;
+    left: calc(50vw - 7.5rem);
+    height: 4rem;
+    width: 15rem;
+    color: var(--main-white);
+    background-color: var(--main-black);
+    font-size: 1.5rem;
+}
+
+
+
+
+/* cards section */
+.cards{
+    display: flex;
+    margin: 5rem 0rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cards .card{
+    padding: 1rem 1rem;
+    margin: 1rem 0rem;
+    display: flex;
+    /* border: 1px solid black; */
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.151);
+}
+.cards .card .btn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.cards .card .btn button{
+    padding: 0.3rem 0.8rem;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--main-green);
+    color: var(--main-white);
+}
+.cards .card .btn .offer {
+    padding: 0.1rem 0.5rem;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--main-black);
+    color: var(--main-white);
+}
+
+
+
+
+
+
+/* New Arrivals --------------------- */
+
+.new-arrivals {
+    margin: 3rem 0rem;
+}
+.new-arrivals .heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.new-arrivals .heading .left h2{
+    font-size: 3rem;
+}
+.new-arrivals .heading .left p{
+    font-size: 1.5rem;
+}
+.new-arrivals .heading .right{
+    font-size: 1.5rem;
+    color: black;
+    position: relative;
+}
+.new-arrivals .heading .right::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: 8px;
+    left: 0;
+}
+.banner{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    
+}
+.banner img{
+    width: 100%;
+}
+.banner .inner-content{
+    width: 60vw;
+    
+    position: absolute;
+    top: 1rem;
+    right: 5rem;
+    z-index: 2;
+}
+.banner .inner-content h4{
+    padding: 1rem 0rem;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+}
+.banner .inner-content p{
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+}
+.banner .inner-content .btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .inner-content .btn button{
+    padding: 0.5rem 2rem;
+    margin: 3rem 0rem 0rem 0rem;
+    font-size: 1.3rem;
+    background-color: var(--main-black);
+    color: var(--main-white);
+}
+.banner .puja-ful{
+    position: absolute;
+    z-index: 1;
+    bottom: 2rem;
+    left: 5rem;
+    width: 25vw;
+}
+
+
+
+
+
+
+ /* Customer Section */
+.customer{
+    margin: 2rem 0rem ;
+}
+.customer .heading{
+    margin-bottom: 2rem;
+}
+.customer .heading h2{
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+}
+.customer .heading p{
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* // Slider */
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after {
+    content: 'next';
+    color: var(--main-white);
+    height: 2.5rem;
+    width: 6rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem !important;
+    background: var(--main-green);
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+    background: black;
+    padding: 0.5rem;
+}
+
+

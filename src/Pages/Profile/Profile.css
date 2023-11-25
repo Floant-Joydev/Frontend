@@ -1,0 +1,82 @@
+.orders{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem 0rem;
+
+}
+.orders h1{
+    margin: 1rem 0rem;
+}
+.orders .orders-box{
+    width: 90%;
+    border-radius: 10px;
+    padding: .5rem 1rem;
+    background-color: var(--main-green);
+    margin: 1rem 0rem;
+}
+.orders .orders-box h4{
+    font-size: 1.2rem;
+    color: white;
+}
+.orders .orders-box .boo{
+    color: white;
+}
+
+.orders .orders-box main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    background-color: white;
+    border-radius: 10px;
+}
+.orders .orders-box main .left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    
+}
+.orders .orders-box main .left .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5rem 0rem;
+
+}
+.orders .orders-box main .left .item p{
+    font-size: 1.2rem;
+    margin: 0rem 1rem;
+    width: 20rem;
+}
+.orders .orders-box .right{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+}
+.orders .orders-box .right .exp{
+    margin: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.orders .orders-box .right h4{
+    color: brown;
+}
+.orders .orders-box .right p{
+    font-size: 1.1rem;
+}
+.orders .orders-box .right .price{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.orders .orders-box .right .status{
+    border: 1px solid var(--main-green);
+    padding: .5rem 1rem;
+    font-weight: 600;
+    color: red;
+}
