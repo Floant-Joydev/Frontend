@@ -2,7 +2,7 @@ import All_logo from "../../assets/icon/All.svg";
 import Bundles_logo from "../../assets/icon/layer1.svg";
 import Plants from "../../assets/icon/layer2.svg";
 
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import Navbar from "../../Components/Navbar/Navbar";
 import ProductCard from "../../Components/Product_card/Product_card";
 
@@ -10,6 +10,7 @@ import "./Products.css";
 import Footer from "../../Components/Footer/Footer";
 import { useSelector } from "react-redux";
 import { selectAllProduct } from "../../features/product/ProductSlice";
+import { useEffect } from "react";
 
 const category = [
   {
@@ -96,6 +97,11 @@ const Products = () => {
       (obj) => obj.SubCategory === product_type
     );
   }
+
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0)
+}, [location.pathname])
 
   return (
     <>

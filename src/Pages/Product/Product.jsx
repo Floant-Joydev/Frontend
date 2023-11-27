@@ -15,7 +15,7 @@ import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { selectUser } from '../../features/auth/authSlice';
 import { createCartAsync } from '../../features/cart/CartSlice';
-import { selectTotalAmount, setAmount, setProducts } from '../../features/Order/OrderSlice';
+import { setAmount, setProducts } from '../../features/Order/OrderSlice';
 
 
 const Product = () => {
@@ -155,9 +155,9 @@ const Product = () => {
           <h2>Our Similer Arrivals</h2>
           <p>New Product With Affordable Price</p>
         </div>
-        <div className="right">
+        <Link to={`products/${product.Category}/All`}><div className="right">
           view all
-        </div>
+        </div></Link>
       </div>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -171,9 +171,7 @@ const Product = () => {
       >
         {similerProduct && similerProduct.slice(0,6).map((ele) => {
           return(
-            <>
             <SwiperSlide key={ele._id}>< ProductCard id={ele._id} salePrice={ele.SalePrice} discount={ele.PriceDiscountPercentage} rating={ele.Rating} price={ele.Price} image={ele.ProductImage1} name={ele.ProductName} category={ele.Category} clr="var(--main-green)" /></SwiperSlide>
-            </>
           )
         })}
       </Swiper>

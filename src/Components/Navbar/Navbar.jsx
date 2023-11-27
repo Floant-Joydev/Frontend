@@ -147,7 +147,8 @@ const Navbar = () => {
 
       <section className="navbar p1">
         <ul>
-          {category.map((ele) => (
+          {category.map((ele, index) => (
+            <Link to={`/products/${ele.name}/All`} key={index}>
             <li key={ele.id}>
               {ele.name} <img src={Down_array} alt="" />
               <div className="sub-navbar">
@@ -160,9 +161,10 @@ const Navbar = () => {
                 </ul>
               </div>
             </li>
+            </Link>
           ))}
-          <li>Offers</li>
-          <li>Blogs</li>
+          <Link to={''}><li>Offers</li></Link>
+          <Link to={'/blogs'}><li>Blogs</li></Link>
         </ul>
       </section>
     </>

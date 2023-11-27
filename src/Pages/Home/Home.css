@@ -16,6 +16,8 @@
 }
 .hero-slider .frame img{
     width: 100vw;
+    height: calc(100vh - 10rem);
+    object-fit: cover;
 }
 @keyframes sliding{
     0%{right: 0vw;}
@@ -43,7 +45,7 @@
 
 .hero-slider button{
     position: absolute;
-    bottom: 10rem;
+    bottom: 8rem;
     left: calc(50vw - 7.5rem);
     height: 4rem;
     width: 15rem;
@@ -59,7 +61,7 @@
 .cards{
     display: flex;
     margin: 5rem 0rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: space-around;
 }
@@ -199,6 +201,12 @@
     width: 100%;
     font-size: 1.5rem;
     text-align: center;
+}
+
+@media screen and (max-width: 1500px) {
+    .cards .card img{
+        width: 9rem;
+    }
 }
 
 

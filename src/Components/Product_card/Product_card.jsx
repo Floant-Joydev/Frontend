@@ -6,12 +6,12 @@ import './Produc_card.css'
 const ProductCard = ({id, discount, rating, salePrice, price, image, name, clr, category}) => {
   return (
     <div className='product-card'>
-        <img src={image} style={{height: "20rem"}} alt="" />
+        <Link to={(category === 'Subscription')? `/subscription/${id}` : `/product/${id}`}><img src={image} style={{height: "20rem"}} alt="" /></Link>
         <div className='discount'>{discount}% off</div>
         <div className="name">
-            <h3>{name}</h3>
+            <h3>{name.slice(0,27)}</h3>
             <div className="rating">
-                <p>{rating}</p><img src="../src/assets/icon/Star.svg" alt="" />
+                <p>{(rating === 'Choose Rating')? '4.9': rating}</p><img src="../src/assets/icon/Star.svg" alt="" />
             </div>
         </div>
         <div className="price">
