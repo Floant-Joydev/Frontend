@@ -145,7 +145,7 @@ export const OrderSlice = createSlice({
       })
       
       .addCase(logoutUser, (state, action) => {
-        state.subcription = null;
+        state.subcription = {};
         state.allSubscription = null;
         state.allOrders = null;
         state.loadingStatus = "idle";

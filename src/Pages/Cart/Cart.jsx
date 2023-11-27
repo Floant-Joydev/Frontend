@@ -8,7 +8,7 @@ import "./Cart.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCartAsync, selectCart } from "../../features/cart/CartSlice";
-import { setAmount, setProducts } from "../../features/Order/OrderSlice";
+import { resetLastSubscription, setAmount, setProducts } from "../../features/Order/OrderSlice";
 
 const Cart = () => {
   const cart = useSelector(selectCart);
@@ -127,6 +127,7 @@ const Cart = () => {
                   onClick={() => {
                     dispatch(setProducts(orderItem))
                     dispatch(setAmount(totalPrice));
+                    dispatch(resetLastSubscription());
                   }}
                 >
                   Place Order

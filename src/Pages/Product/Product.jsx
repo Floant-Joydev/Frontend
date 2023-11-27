@@ -15,7 +15,7 @@ import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { selectUser } from '../../features/auth/authSlice';
 import { createCartAsync } from '../../features/cart/CartSlice';
-import { setAmount, setProducts } from '../../features/Order/OrderSlice';
+import { resetLastSubscription, setAmount, setProducts } from '../../features/Order/OrderSlice';
 
 
 const Product = () => {
@@ -87,7 +87,7 @@ const Product = () => {
             <div className="name">
                 <h1>{product.ProductName}</h1>
                 <div className="rating">
-                    <p>{product.Rating} <span><img src={star} alt="" /></span></p>
+                    <p>{(product.Rating === 'Choose Rating')? '4.9': product.Rating} <span><img src={star} alt="" /></span></p>
                 </div>
             </div>
             <div className="price">
@@ -138,6 +138,7 @@ const Product = () => {
                 <Link to={'/login/1'}><button onClick={() => {
                     dispatch(setProducts([{product: product._id, quantity: quantity}]));
                     dispatch(setAmount(product.SalePrice))
+                    dispatch(resetLastSubscription());
                 }}>Buy Now</button></Link>
             </div>
 
