@@ -1,8 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
-import blog_img from '../../assets/image/Blog1.svg'
-
 import Navbar from '../../Components/Navbar/Navbar'
 import ProductCard from '../../Components/Product_card/Product_card';
 
@@ -11,21 +9,62 @@ import Footer from '../../Components/Footer/Footer';
 
 import star2 from '../../assets/icon/Star2.svg';
 import product1 from '../../assets/image/Product1.svg';
+import { useEffect, useState } from 'react';
+import { useLocation, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectAllBlogs } from '../../features/blog/BlogSlice';
+import { selectAllProduct } from '../../features/product/ProductSlice';
 
 
 const OneBlog = () => {
+
+  const location = useLocation();
+  const allBlog = useSelector(selectAllBlogs);
+  const param = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, [location.pathname])
+
+  let blog = null
+  if( allBlog ){
+    let index = allBlog.findIndex((obj) => obj._id === param.blog_id );
+    blog = allBlog[index];
+  }
+
+  // console.log(blog)
+
+  const allProduct = useSelector(selectAllProduct);
+  let newArrival;
+  if (allProduct) {
+    newArrival = [...allProduct].reverse();
+  }
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
     <>
     
     <Navbar />
 
     <section className="product-heading p1">
-        <h3>Home  <strong>{">"}</strong><span>Blogs</span> <strong>{">"}</strong> <span>Maghai Paan Blog</span></h3>
+        <h3>Home  <strong>{">"}</strong><span>Blogs</span> <strong>{">"}</strong> <span>{blog.BlogName}</span></h3>
     </section>
 
     <section className="one-blog p1">
 
-        <div className="img" style={{ backgroundImage : `url(${blog_img})` }}>
+        <div className="img" style={{ backgroundImage : `url(${blog.BlogImage})` }}>
             {/* <img src={blog_img} alt="" /> */}
         </div>
 
@@ -33,8 +72,8 @@ const OneBlog = () => {
 
             <div className="heading">
                 <div className="left">
-                    <h2>The Hidden Power of  “Maghai Paan” more than just chew</h2>
-                    <p>24-Jan-2021</p>
+                    <h2>{blog.BlogName}</h2>
+                    <p>{blog.createdAt.slice(0,10)}</p>
                 </div>
                 <div className="right">
                     <div className="stars">
@@ -52,13 +91,12 @@ const OneBlog = () => {
 
                 <div className="item">
                     <p><strong>Introduction</strong></p>
-                    <p>Looking to add a touch of nature to your home or office? Our online nursery offers an impressive selection of plants for sale online. Whether you're a seasoned plant enthusiast or just starting your green journey, we have something for everyone.</p>
+                    <p>{blog.BlogIntro}</p>
                 </div>
                 <div className="item">
                     <p><strong>Sub Points</strong></p>
                     <ol>
-                        <li><p>Looking to add a touch of nature to your home or office? Our online nursery offers an impressive selection of plants for sale online. Whether you're a seasoned plant enthusiast or just starting your green journey</p></li>
-                        <li><p>Looking to add a touch of nature to your home or office? Our online nursery offers an impressive selection of plants for sale online. Whether you're a seasoned plant enthusiast or just starting your green journey</p></li>
+                        <li><p>{blog.BlogPara}</p></li>
                     </ol>
                 </div>
 
@@ -79,21 +117,34 @@ const OneBlog = () => {
         </div>
       </div>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        slidesPerView={4}
-        navigation
-        pagination={{ clickable: true }}
-        // scrollbar={{ draggable: true }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
-      >
-        <SwiperSlide><ProductCard image={product1} name='Product Name' clr="var(--main-green)" /></SwiperSlide>
-        <SwiperSlide><ProductCard image={product1} name='Product Name' clr="var(--main-green)"/></SwiperSlide>
-        <SwiperSlide><ProductCard image={product1} name='Product Name' clr="var(--main-green)"/></SwiperSlide>
-        <SwiperSlide><ProductCard image={product1} name='Product Name' clr="var(--main-green)"/></SwiperSlide>
-        <SwiperSlide><ProductCard image={product1} name='Product Name' clr="var(--main-green)"/></SwiperSlide>
-      </Swiper>
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={windowSize > 1500 ? 4 : 3}
+          navigation
+          pagination={{ clickable: true }}
+          // scrollbar={{ draggable: true }}
+          // onSlideChange={() => console.log('slide change')}
+          // onSwiper={(swiper) => console.log(swiper)}
+        >
+          {newArrival &&
+            newArrival.slice(0, 6).map((ele) => {
+              return (
+                <SwiperSlide key={ele._id}>
+                  <ProductCard
+                    id={ele._id}
+                    salePrice={ele.SalePrice}
+                    discount={ele.PriceDiscountPercentage}
+                    rating={ele.Rating}
+                    price={ele.Price}
+                    image={ele.ProductImage1}
+                    name={ele.ProductName}
+                    category={ele.Category}
+                    clr="var(--main-green)"
+                  />
+                </SwiperSlide>
+              );
+            })}
+        </Swiper>
     </section>
     
     <Footer />

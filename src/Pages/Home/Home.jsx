@@ -23,9 +23,11 @@ import { useSelector } from "react-redux";
 import { selectAllProduct } from "../../features/product/ProductSlice";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { selectAllBlogs } from "./../../features/blog/BlogSlice";
 
 const Home = () => {
   const allProduct = useSelector(selectAllProduct);
+  const blog = useSelector(selectAllBlogs);
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -160,7 +162,9 @@ const Home = () => {
             <h2>Puja Flowers with Monthly Subscription</h2>
             <p>here is a our subscription offer you get affordable</p>
           </div>
-          <Link to={'products/Subscription/All'}><div className="right">view all</div></Link>
+          <Link to={"products/Subscription/All"}>
+            <div className="right">view all</div>
+          </Link>
         </div>
         <div className="banner">
           <img src={banner1} alt="" />
@@ -184,7 +188,9 @@ const Home = () => {
               traditional flower
             </p>
             <div className="btn">
-              <Link to={'products/Subscription/All'}><button >Get Your Subscription Now</button></Link>
+              <Link to={"products/Subscription/All"}>
+                <button>Get Your Subscription Now</button>
+              </Link>
             </div>
           </div>
           <img
@@ -338,36 +344,17 @@ const Home = () => {
           // onSlideChange={() => console.log('slide change')}
           // onSwiper={(swiper) => console.log(swiper)}
         >
-          <SwiperSlide>
-            <BlogCard
-              image={blog1}
-              des="The Hidden Power of “Maghai Paan” more than just chew"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogCard
-              image={blog1}
-              des="The Hidden Power of “Maghai Paan” more than just chew"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogCard
-              image={blog1}
-              des="The Hidden Power of “Maghai Paan” more than just chew"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogCard
-              image={blog1}
-              des="The Hidden Power of “Maghai Paan” more than just chew"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogCard
-              image={blog1}
-              des="The Hidden Power of “Maghai Paan” more than just chew"
-            />
-          </SwiperSlide>
+          {blog && blog.slice(0, 6).map((ele, ind) => {
+            return (
+              <SwiperSlide key={ind}>
+                <BlogCard
+                  image={ele.BlogImage}
+                  des={ele.BlogIntro}
+                  id={ele._id}
+                />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </section>
 
