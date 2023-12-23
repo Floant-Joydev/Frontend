@@ -1,8 +1,6 @@
 import { useSelector } from "react-redux";
-import Blog_img from "../../assets/image/Blog1.svg";
 import BlogCard from "../../Components/Blog_card/Blog_card";
 
-import Blog_card from "../../Components/Blog_card/Blog_card";
 import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Navbar/Navbar";
 import "./Blogs.css";
