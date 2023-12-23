@@ -18,7 +18,7 @@ import ProductCard from "./../../Components/Product_card/Product_card";
 import group from "../../assets/image/Mask group.svg";
 import hero from "../../assets/image/Hero.svg";
 import banner1 from "../../assets/image/banner1.svg";
-import blog1 from "../../assets/image/Blog1.svg";
+
 import { useSelector } from "react-redux";
 import { selectAllProduct } from "../../features/product/ProductSlice";
 import { useEffect, useState } from "react";

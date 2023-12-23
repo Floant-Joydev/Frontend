@@ -103,3 +103,25 @@
     color: blue;
     text-decoration: underline;
 }
+
+
+@media screen and (max-width: 600px) {
+    
+    .cart{
+        flex-direction: column;
+    }
+    .cart .left{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .cart .right{
+        width: 100%;
+    }
+    .cart .left .box .delete{
+        width: 15px;
+        
+    }
+    .cart .left .box .image{
+        width: 15%;
+    }
+}

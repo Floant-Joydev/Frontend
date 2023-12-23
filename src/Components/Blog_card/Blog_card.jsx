@@ -8,11 +8,11 @@ const BlogCard = ({image, des, id}) => {
     <>
     <div className="blog">
         <div className="image">
-          <Link to={`blog/${id}`}><img src={image} alt={image} /></Link>
+          <Link to={`/blog/${id}`}><img src={image} alt={image} /></Link>
         </div>
         <p>{des}</p>
         <div className="blog-btn">
-            <Link to={`blog/${id}`}><button>Read Blog</button></Link>
+            <Link to={`/blog/${id}`}><button>Read Blog</button></Link>
         </div>
     </div>
     </>

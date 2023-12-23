@@ -233,6 +233,25 @@
 
 
 
+@media screen and ( max-width: 600px) {
+    
+    .orders .orders-box main .left{
+        width: 40%;
+    }
+    .orders .orders-box main .left .item{
+        width: 100%;
+    }
+    .orders .orders-box main .left .item img{
+        width: 50px;
+    }
+    .orders .orders-box main .right .status{
+        padding: .2rem .5rem;
+    }
+
+}
+
+
+
 
 
 

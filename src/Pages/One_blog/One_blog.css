@@ -55,3 +55,16 @@
 .one-blog .content .body .item ol{
     margin-left: 2rem;
 }
+
+@media screen and (max-width: 550px) {
+
+    .one-blog .content .heading .right .stars{
+        width: 70px;
+    }
+    
+    .one-blog .content .heading .right .stars img{
+        width: 10px;
+        margin: 0rem .2rem;
+    }
+
+}

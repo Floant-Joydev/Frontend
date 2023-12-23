@@ -22,3 +22,18 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 500px) {
+    
+    .blog{
+        width: 22rem;
+    }
+
+}
+@media screen and (max-width: 435px) {
+    
+    .blog{
+        width: 16rem;
+    }
+
+}
