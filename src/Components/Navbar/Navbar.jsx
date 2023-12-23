@@ -108,7 +108,7 @@ const Navbar = () => {
       </section>
 
       <section className="middle p1">
-        <Link to={"/"}>
+        <Link to={"/"} className="first-a">
           <img src={logo} alt="" />
         </Link>
         <div className="search">
@@ -117,7 +117,7 @@ const Navbar = () => {
           <img src={Search} alt="" />
         </div>
         <div className="cart-icon">
-          <Link to={"/cart"}>
+          <Link to={"/cart"} className="cart">
             <img src={Shoping_cart} alt="" />
           </Link>
           <div className="cart-number">{cartLength}</div>

@@ -43,3 +43,10 @@
     left: 0;
     position: absolute;
 }
+
+
+@media screen and (max-width: 450px) {
+    .blog{
+        width: 18rem;
+    }
+}

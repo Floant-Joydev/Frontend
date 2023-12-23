@@ -82,7 +82,102 @@
 .product-card p{
     padding: 0.5rem 0.5rem;
 }
+.product-card .discount{
+    /* padding: 10px ; */
+    text-align: center;
+    font-size: .8rem;
+}
 
+
+
+@media screen and (max-width: 1000px) {
+    
+    .product-card{
+        width: 16rem;
+    }
+    .product-card .discount{
+        font-size: .8rem;
+    }
+    .product-card .name h3{
+        height: 30px;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        overflow: hidden;
+    }
+    .product-card .price h4 span::after{
+        bottom: .7rem;
+    }
+
+}
+@media screen and (max-width: 850px) {
+    
+    .product-card{
+        width: 30vw;
+    }
+    .product-card .discount{
+        font-size: .8rem;
+    }
+    .product-card .name h3{
+        height: 30px;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        overflow: hidden;
+    }
+
+}
+@media screen and (max-width: 700px) {
+    
+    .product-card{
+        width: 28vw;
+    }
+    .product-card .discount{
+        font-size: .8rem;
+    }
+    .product-card .name h3{
+        height: 30px;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        overflow: hidden;
+    }
+    .new-arrivals .heading .right::after{
+        bottom: 0;
+    }
+
+}
+@media screen and (max-width: 530px) {
+    
+    .product-card{
+        width: 30vw;
+    }
+    .new-arrivals .heading .left h2{
+        font-size: 2rem;
+    }
+    
+    .new-arrivals .heading .left p{
+        font-size: 1.2rem;
+    }
+    .product-card .discount{
+        font-size: .8rem;
+    }
+    .product-card .name h3{
+        height: 20px;
+        
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        overflow: hidden;
+    }
+    .new-arrivals .heading .right::after{
+        bottom: 0;
+    }
+    .new-arrivals .heading .right{
+        width: 5rem;
+    }
+
+}
 
 
 

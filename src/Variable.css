@@ -30,3 +30,32 @@ a {
 button, img{
     cursor: pointer;
 }
+
+@media screen and (max-width: 1300px) {
+
+    .p1{
+        padding: 0rem 2rem;
+    }
+    .m1{
+        margin: 0rem 2rem;
+    }
+    
+}
+@media screen and (max-width: 900px){
+    html{
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width: 700px) {
+
+    html{
+        font-size: .6rem;
+    }
+    .p1{
+        padding: 0rem 1rem;
+    }
+    .m1{
+        margin: 0rem 1rem;
+    }
+    
+}

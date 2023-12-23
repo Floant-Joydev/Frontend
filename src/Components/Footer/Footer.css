@@ -55,3 +55,10 @@ footer .main-para{
     left: 0;
     bottom: 5px;
 }
+
+
+@media screen and (max-width: 800px) {
+    .footer{
+        flex-wrap: wrap;
+    }
+}

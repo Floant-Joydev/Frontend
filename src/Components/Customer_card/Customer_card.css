@@ -38,3 +38,36 @@
     top: -5px;
     left: calc(50% - 20%);
 }
+
+
+@media screen and (max-width: 1200px) {
+    .cust-card{
+        width: 14rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    .cust-card{
+        width: 16rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    .cust-card{
+        width: 16rem;
+    }
+    .cust-card .star img{
+        margin: 1rem .1rem;
+        width: 10px;
+    }
+    .customer .heading h2{
+        font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .cust-card{
+        width: 12rem;
+    }
+    .cust-card .star img{
+        margin: 1rem .1rem;
+        width: 10px;
+    }
+}
