@@ -286,3 +286,11 @@
     right: .5rem;
     top: calc(50% - 1.5rem);
 }
+
+
+
+@media screen and (max-width: 520px) {
+    .product-body .subs-right {
+        width: 100%;
+    }
+}
