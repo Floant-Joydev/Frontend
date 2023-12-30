@@ -261,6 +261,10 @@
 
 @media screen and (max-width: 520px) {
 
+    .product-body .right .name div{
+        width: 7rem;
+    }
+
     .product-body .right .price .offer {
         padding: .5rem 2rem;
         /* font-size: 2rem; */
@@ -284,7 +288,7 @@
         font-size: 1.4rem;
     }
     .product-body .right .size div button{
-        padding: .6rem 2rem ;
+        padding: .3rem 1.5rem;
         font-size: 1.4rem;
     }
     .product-body .right .size div{
