@@ -50,7 +50,7 @@ const Login = () => {
       <div className="auth-main">
         <section className="auth-heading">
           <div>
-            <img src={back} alt="Back_here" />
+            <Link to={'/'}><img src={back} alt="Back_here" /></Link>
             <p>Login Here</p>
           </div>
           <div>

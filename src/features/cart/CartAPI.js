@@ -1,5 +1,4 @@
-import { useSelector } from "react-redux";
-import { selectCart } from "./CartSlice";
+
 
 export function fetchAllCart (token) {
     return new Promise( async(resolve,reject) => {
@@ -46,6 +45,7 @@ export function createCart (productData ) {
 }
 export function deleteCart ( productData ) {
     return new Promise( async(resolve,reject) => {
+        console.log( 'Cart delete call');
         try{
             const response = await fetch(`${process.env.REACT_APP_BASE_URL}/customer/deletecart`, {
                 method: "DELETE",
@@ -71,6 +71,7 @@ export function deleteCart ( productData ) {
 }
 export function deleteAllItem () {
     return new Promise( async(resolve) => {
+        console.log( 'Cart API call');
         const floant_token = localStorage.getItem('floant-auth-token')
         const cart = await fetchAllCart(floant_token);
         const carts = cart.data.products;
@@ -80,7 +81,7 @@ export function deleteAllItem () {
         // console.log('done');
         
         for( let item of carts ){
-            // console.log('call')
+            console.log('cart for loop call ')
             await deleteCart({productId: item.product._id, token: floant_token})
         }
 

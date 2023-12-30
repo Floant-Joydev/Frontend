@@ -54,7 +54,7 @@ const Register = () => {
       <div className="auth-main">
         <section className="auth-heading">
           <div>
-            <img src={back} alt="Back_here" />
+            <Link to={'/'}><img src={back} alt="Back_here" /></Link>
             <p>Register Here</p>
           </div>
           <div>

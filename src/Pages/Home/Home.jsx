@@ -25,6 +25,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { selectAllBlogs } from "./../../features/blog/BlogSlice";
 
+
+
 const Home = () => {
   const allProduct = useSelector(selectAllProduct);
   const blog = useSelector(selectAllBlogs);
@@ -128,7 +130,7 @@ const Home = () => {
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
-          slidesPerView={windowSize > 1500 ? 4 : 3}
+          slidesPerView={windowSize > 1500 ? 4 : (windowSize > 420) ? 3: 2 }
           navigation
           pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
@@ -214,7 +216,7 @@ const Home = () => {
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
-          slidesPerView={windowSize > 1500 ? 4 : 3}
+          slidesPerView={windowSize > 1500 ? 4 : (windowSize > 420) ? 3: 2 }
           navigation
           pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
@@ -255,7 +257,7 @@ const Home = () => {
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
-          slidesPerView={windowSize > 1500 ? 4 : 3}
+          slidesPerView={windowSize > 1500 ? 4 : (windowSize > 420) ? 3: 2}
           navigation
           pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
@@ -296,7 +298,7 @@ const Home = () => {
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
-          slidesPerView={windowSize > 1500 ? 4 : 3}
+          slidesPerView={windowSize > 1500 ? 4 : (windowSize > 420) ? 3: 2}
           navigation
           pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}

@@ -7,6 +7,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 
 import order_image from "../../assets/icon/Order.png";
 import { resetLastOrder } from "../../features/Order/OrderSlice";
+import { deleteAllItemAsync } from "../../features/cart/CartSlice";
 
 const Order = () => {
 
@@ -16,6 +17,7 @@ const Order = () => {
   
   useEffect(() => {
     dispatch(resetLastOrder())
+    dispatch(deleteAllItemAsync());
   },[dispatch])
 
   return (

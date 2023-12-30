@@ -166,7 +166,7 @@ const Products = () => {
           <div className="right">
             {allProduct && sortedProduct.length === 0 && <p style={{color: "red", fontSize: "1.2rem"}}>No Items Found on this Category</p>}
             {sortedProduct && sortedProduct.map((ele) => (
-              < ProductCard id={ele._id} salePrice={ele.SalePrice} discount={ele.PriceDiscountPercentage} rating={ele.Rating} price={ele.Price} image={ele.ProductImage1} name={ele.ProductName} category={ele.Category} clr="var(--main-green)" />
+              < ProductCard key={ele._id} id={ele._id} salePrice={ele.SalePrice} discount={ele.PriceDiscountPercentage} rating={ele.Rating} price={ele.Price} image={ele.ProductImage1} name={ele.ProductName} category={ele.Category} clr="var(--main-green)" />
             ))}
           </div>
         </div>

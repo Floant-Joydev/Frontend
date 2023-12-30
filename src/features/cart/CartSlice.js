@@ -35,8 +35,9 @@ export const deleteCartAsync = createAsyncThunk(
   }
 );
 export const deleteAllItemAsync = createAsyncThunk(
-  'order/createOrder',
-  async( ) => {
+  'cart/createOrder',
+  async() => {
+    console.log( 'Cart async thunk call');
     const res = await deleteAllItem();
 
     return res.data;
@@ -85,6 +86,7 @@ export const cartSlice = createSlice({
         state.status = 'loading';
       })
       .addCase(deleteAllItemAsync.fulfilled, (state, action) => {
+        console.log( 'final run ');
         state.status = 'idle';
         state.carts = [];
       })

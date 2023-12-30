@@ -246,7 +246,7 @@ const Product = () => {
             <Swiper
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               spaceBetween={50}
-              slidesPerView={windowSize > 1500 ? 4 : 3}
+              slidesPerView={windowSize > 1500 ? 4 : (windowSize > 420) ? 3: 2}
               navigation
               pagination={{ clickable: true }}
               // scrollbar={{ draggable: true }}

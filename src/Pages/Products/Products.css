@@ -80,3 +80,10 @@
 .products-content div{
     margin: 2rem 0rem;
 }
+
+@media screen and (max-width: 500px) {
+    .products-main .body .left {
+        width: 45%;
+    }
+    
+}

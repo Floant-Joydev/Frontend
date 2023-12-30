@@ -52,7 +52,10 @@ const AddAddress = () => {
         </section>
 
         <form className="p1" onSubmit={handleSubmit((data) => {
-          if( loginuser.address.length >= 4 ){
+          if( address_ind !== undefined ){
+            toast.info('Address updation will come soon...')
+          }
+          else if( loginuser.address.length >= 5 ){
             toast.error("You cannot add more than 4 address ");
           }
           else{

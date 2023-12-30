@@ -2,6 +2,8 @@
 import { Link } from 'react-router-dom'
 import './Produc_card.css'
 
+import star from '../../assets/icon/Star.svg';
+
 
 const ProductCard = ({id, discount, rating, salePrice, price, image, name, clr, category}) => {
   return (
@@ -11,7 +13,7 @@ const ProductCard = ({id, discount, rating, salePrice, price, image, name, clr, 
         <div className="name">
             <h3>{name.slice(0,27)}</h3>
             <div className="rating">
-                <p>{(rating === 'Choose Rating')? '4.9': rating}</p><img src="../src/assets/icon/Star.svg" alt="" />
+                <p>{(rating === 'Choose Rating')? '4.9': rating}</p><img src={star} alt="" />
             </div>
         </div>
         <div className="price">
