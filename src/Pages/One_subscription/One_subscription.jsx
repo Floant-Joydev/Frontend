@@ -8,7 +8,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 import './One_subscription.css'
 import Footer from '../../Components/Footer/Footer';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectProducts, setAmount, setSubscriptionProduct } from '../../features/Order/OrderSlice';
+import { setAmount, setSubscriptionProduct } from '../../features/Order/OrderSlice';
 import { useNavigate, useParams } from 'react-router-dom';
 import { selectAllProduct } from '../../features/product/ProductSlice';
 import { useForm } from 'react-hook-form';
@@ -211,6 +211,14 @@ const OneSubscription = () => {
     const Navigate = useNavigate();
 
 
+    const [selectedImage, setSelectedImage] = useState("");
+
+    useEffect(() => {
+        if (product) {
+          setSelectedImage(product.ProductImage1);
+        }
+    }, [product]);
+
   return (
     <>
 
@@ -228,13 +236,13 @@ const OneSubscription = () => {
     <section className="product-body p1">
 
         <div className="left">
-            <img src={product.ProductImage1} alt="" />
+            <img src={selectedImage} alt="" />
 
             <div className="sub-image">
-                <img src={product.ProductImage1} alt="" />
-                <img src={product.ProductImage2} alt="" />
-                <img src={product.ProductImage3} alt="" />
-                <img src={product.ProductImage4} alt="" />
+                <img src={product.ProductImage1} alt="" onClick={() => setSelectedImage(product.ProductImage1)}/>
+                <img src={product.ProductImage2} alt="" onClick={() => setSelectedImage(product.ProductImage2)}/>
+                <img src={product.ProductImage3} alt="" onClick={() => setSelectedImage(product.ProductImage3)}/>
+                <img src={product.ProductImage4} alt="" onClick={() => setSelectedImage(product.ProductImage4)}/>
             </div>
 
         </div>
@@ -327,12 +335,12 @@ const OneSubscription = () => {
                 </div>
             </div>
 
-            <div className="discount">
+            {/* <div className="discount">
                 <select name="" id="">
                     <option value="">Apply Discount Coupon...</option>
                 </select>
                 <button>Apply</button>
-            </div>
+            </div> */}
 
             <div className="total">
                 <h4>Total</h4>
@@ -403,7 +411,7 @@ const OneSubscription = () => {
                         prevTag.map((ele,ind) =>{
                             
                             return(
-                                <li className="inactive" >{lastDateofLastMonth+ind}</li>
+                                <li className="inactive" key={ind} >{lastDateofLastMonth+ind}</li>
                             )
                         })
                     }

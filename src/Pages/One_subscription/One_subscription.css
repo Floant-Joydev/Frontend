@@ -292,5 +292,43 @@
 @media screen and (max-width: 520px) {
     .product-body .subs-right {
         width: 100%;
+        padding: 0rem 2rem;
+    }
+    .amount .item .box .line p{
+        font-size: 1.4rem;
+    }
+    .total{
+        margin: 2rem 0rem;
+        height: 3rem;
+    }
+    .total h4{
+        font-size: 1.5rem;
+    }
+
+    .subs-right .date .item div .box{
+        padding: 1rem 2.5rem;
+    }
+    .subs-right .date .item div .box p {
+        font-size: 1.1rem;
+    }
+    
+    .subs-right .date .item div .box:first-child{
+        margin: 0 1rem 0 0;
+    }
+    .subs-right .date .item div .box button{
+        font-size: 1.3rem;
+        padding: .5rem 1rem;
+    }
+    .subs-right .date .item div .box select{
+        font-size: 1.3rem;
+        /* padding: .5rem 1rem; */
+    }
+    .subs-right .qnt .item .box div select{
+        font-size: 1.3rem;
+        padding: .5rem 1rem;
+    }
+    .subs-right .btn button{
+        font-size: 1.5rem;
+        padding: 1rem 3rem;
     }
 }
