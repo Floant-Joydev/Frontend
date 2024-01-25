@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react'
-import main_product from '../../assets/image/subscription-ful.svg'
+// import main_product from '../../assets/image/subscription-ful.svg'
 
 
 import Navbar from '../../Components/Navbar/Navbar'
@@ -144,6 +144,9 @@ const OneSubscription = () => {
 
         if( days < 15 ){
             alert("You have to select minimum 15 Days for your Subscription.")
+        }
+        else if( days > 90 ){
+            alert("Your choosen days more than 90. please make it under 90");
         }
         else{
 
@@ -349,13 +352,13 @@ const OneSubscription = () => {
 
             <div className="btn">
                  <button onClick={handleSubmit((data) => {
-                    if(days < 15 ){
-                        toast.error('Select Atleast 15 Days For Subscription')
+                    if(days < 15 || days > 90 ){
+                        toast.error('Select Atleast 15 Days For Subscription or less than 90 days')
                     }
                     else{
                         dispatch(setAmount(days*(Quantity*Math.round(product.Price/30))))
                         dispatch(setSubscriptionProduct({...data, totalDays: days, totalAmount: days*(Quantity*Math.round(product.Price/30)), product: product._id, Quantity: Quantity, selectedDates: selectedDate }));
-                        Navigate('/address');
+                        Navigate('/login/1');
                     }
                     
                  })}>Subscribe Now</button>

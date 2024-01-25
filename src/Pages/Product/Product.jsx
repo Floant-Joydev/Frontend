@@ -239,7 +239,7 @@ const Product = () => {
                 <h2>Our Similer Arrivals</h2>
                 <p>New Product With Affordable Price</p>
               </div>
-              <Link to={`products/${product.Category}/All`}>
+              <Link to={`/products/Plants/All`}>
                 <div className="right">view all</div>
               </Link>
             </div>

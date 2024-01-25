@@ -134,7 +134,7 @@ const Cart = () => {
                 </button>
               </Link>
             )}
-            <Link to="/products/All">{"(Shop More)"}</Link>
+            <Link to="/">{"(Shop More)"}</Link>
           </div>
         </div>
       </div>
