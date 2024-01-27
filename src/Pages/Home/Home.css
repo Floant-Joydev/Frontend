@@ -221,6 +221,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        right: 5rem;
     }
     .banner .inner-content .btn{
         margin: 1rem 0rem;

@@ -239,7 +239,7 @@ const Product = () => {
                 <h2>Our Similer Arrivals</h2>
                 <p>New Product With Affordable Price</p>
               </div>
-              <Link to={`/products/Plants/All`}>
+              <Link to={`/offer/new_arrivals`}>
                 <div className="right">view all</div>
               </Link>
             </div>
