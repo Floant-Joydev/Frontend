@@ -93,6 +93,7 @@ function App() {
           <Route path="/order/:order_id" element={<Order />} />
           <Route path="/subscriptions/:order_id" element={<SubscriptionSuccess />} />
           <Route path="/product/:product_id" element={<Product />} />
+          <Route path="/offer/:type" element={<OfferPage />} />
           <Route
             path="/products/:product_group/:product_type"
             element={<Products />}

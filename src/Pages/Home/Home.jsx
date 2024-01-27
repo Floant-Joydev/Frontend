@@ -80,40 +80,40 @@ const Home = () => {
           <img src={hero} alt="slider_image" />
           <img src={hero} alt="slider_image" />
         </div>
-        <button>Shop Now</button>
+        <Link to={'/offer/all'}><button>Shop Now</button></Link>
       </section>
 
       <section className="cards p1">
         <div className="card">
           <div className="btn">
             <div className="offer">Best Deals</div>
-            <button>Order Now</button>
+            <Link to={'/products/Plants/All'}><button>Order Now</button></Link>
           </div>
-          <img src={group} alt="" />
+          <Link to={'/products/Plants/All'}><img src={group} alt="" /></Link>
         </div>
 
         <div className="card">
           <div className="btn">
             <div className="offer">Best Deals</div>
-            <button>Order Now</button>
+            <Link to={'/products/Plants/All'}><button>Order Now</button></Link>
           </div>
-          <img src={group} alt="" />
+          <Link to={'/products/Plants/All'}><img src={group} alt="" /></Link>
         </div>
 
         <div className="card">
           <div className="btn">
             <div className="offer">Best Deals</div>
-            <button>Order Now</button>
+            <Link to={'/products/Plants/All'}><button>Order Now</button></Link>
           </div>
-          <img src={group} alt="" />
+          <Link to={'/products/Plants/All'}><img src={group} alt="" /></Link>
         </div>
 
         <div className="card">
           <div className="btn">
             <div className="offer">Best Deals</div>
-            <button>Order Now</button>
+            <Link to={'/products/Plants/All'}><button>Order Now</button></Link>
           </div>
-          <img src={group} alt="" />
+          <Link to={'/products/Plants/All'}><img src={group} alt="" /></Link>
         </div>
       </section>
 
@@ -123,7 +123,7 @@ const Home = () => {
             <h2>Our New Arrivals</h2>
             <p>New Product With Affordable Price</p>
           </div>
-          <Link to={`/products/Plants/All`}>
+          <Link to={`/offer/new_arrivals`}>
             <div className="right">view all</div>
           </Link>
         </div>

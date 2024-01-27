@@ -163,7 +163,7 @@ const Navbar = () => {
             </li>
             </Link>
           ))}
-          <Link to={''}><li>Offers</li></Link>
+          <Link to={'/offer/all'}><li>Offers</li></Link>
           <Link to={'/blogs'}><li>Blogs</li></Link>
         </ul>
       </section>

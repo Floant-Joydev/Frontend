@@ -1,19 +1,31 @@
 
+import { useSelector } from 'react-redux'
 import Footer from '../../Components/Footer/Footer'
 import Navbar from '../../Components/Navbar/Navbar'
 import ProductCard from '../../Components/Product_card/Product_card'
 
-import left_array from '../../assets/icon/left_array.svg'
-import right_array from '../../assets/icon/right_array.svg'
-
-import product1 from '../../assets/image/Product1.svg'
-import product3 from '../../assets/image/Product3.svg'
-import product4 from '../../assets/image/Product4.svg'
-import product2 from '../../assets/image/product2.svg'
-
 import './Offer_page.css'
+import { selectAllProduct } from '../../features/product/ProductSlice'
+import { useParams } from 'react-router-dom'
 
 const OfferPage = () => {
+
+    const {type} = useParams();
+
+    const products = useSelector(selectAllProduct);
+
+    let shorted_product;
+    if( type === 'all' && products ){
+        shorted_product = [...products].sort((a, b) => {
+            return a.PriceDiscountPercentage - b.PriceDiscountPercentage;
+        });
+        shorted_product.reverse();
+    }
+    else{
+        shorted_product = [...products].reverse();
+    }
+
+
   return (
     <>
     
@@ -35,31 +47,25 @@ const OfferPage = () => {
 
     <section className="offer-body p1">
 
-        <ProductCard image={product1} name='Product Name' clr="var(--main-green)" />
-        <ProductCard image={product1} name='Product Name' clr="var(--main-green)" />
-        <ProductCard image={product1} name='Product Name' clr="var(--main-green)" />
-        <ProductCard image={product1} name='Product Name' clr="var(--main-green)" />
-
-        <ProductCard image={product4} name='Anthurium - Ottawa' clr="var(--main-brown" />
-        <ProductCard image={product4} name='Anthurium - Ottawa' clr="var(--main-brown" />
-        <ProductCard image={product4} name='Anthurium - Ottawa' clr="var(--main-brown" />
-        <ProductCard image={product4} name='Anthurium - Ottawa' clr="var(--main-brown" />
-
-        <ProductCard image={product3} name='Anthurium - Ottawa' clr="var(--main-green)"/>
-        <ProductCard image={product3} name='Anthurium - Ottawa' clr="var(--main-green)"/>
-        <ProductCard image={product3} name='Anthurium - Ottawa' clr="var(--main-green)"/>
-        <ProductCard image={product3} name='Anthurium - Ottawa' clr="var(--main-green)"/>
-
-        <ProductCard image={product2} name='Anthurium - Ottawa' clr="var(--main-brown" />        
-        <ProductCard image={product2} name='Anthurium - Ottawa' clr="var(--main-brown" />        
-        <ProductCard image={product2} name='Anthurium - Ottawa' clr="var(--main-brown" />        
-        <ProductCard image={product2} name='Anthurium - Ottawa' clr="var(--main-brown" />        
-
+        {shorted_product && shorted_product.map((ele, ind) => (
+            <ProductCard
+            key={ind}
+            id={ele._id}
+            salePrice={ele.SalePrice}
+            discount={ele.PriceDiscountPercentage}
+            rating={ele.Rating}
+            price={ele.Price}
+            image={ele.ProductImage1}
+            name={ele.ProductName}
+            category={ele.Category}
+            clr="var(--main-green)"
+          />
+        ))}
 
 
     </section>
 
-    <section className="offer-pagination p1">
+    {/* <section className="offer-pagination p1">
         <div className="pages">
             <p>1</p>
             <p>2</p>
@@ -71,7 +77,7 @@ const OfferPage = () => {
             <button className="previous"><img src={left_array} alt="" /></button>
             <button className="after">Next Page <img src={right_array} alt="" /></button>
         </div>
-    </section>
+    </section> */}
 
     <Footer />
 

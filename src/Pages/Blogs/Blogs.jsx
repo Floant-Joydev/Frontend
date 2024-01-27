@@ -26,12 +26,13 @@ const Blogs = () => {
             <h2>Read Blogs For Plants</h2>
             <p>Here you can read plant related blogs</p>
           </div>
-          <button>View All</button>
+          {/* <button>View All</button> */}
         </div>
         <div className="blogs">
-          {blogs && blogs.map((ele) => {
+          {blogs && blogs.map((ele, ind) => {
             return (
               <BlogCard
+                key={ind}
                 image={ele.BlogImage}
                 des={ele.BlogIntro}
                 id={ele._id}
